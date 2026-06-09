@@ -1,11 +1,11 @@
 # 32-bit Single-Cycle MIPS Processor (VHDL RTL Implementation)
 
-## 📌 Project Overview
+##  Project Overview
 This repository contains a full RTL implementation of a **32-bit Single-Cycle MIPS Processor**, designed from scratch using VHDL. The architecture follows the classic MIPS instruction set, integrating a robust datapath and a central Control Unit to execute instructions in a single clock cycle.
 
 The design is deeply modular, instantiating separate hardware components such as the Arithmetic Logic Unit (ALU), Register File, Data Memory, Instruction Memory, and Program Counter (PC). A comprehensive assembly-level testbench is included to verify the correct execution of arithmetic, logical, memory access, and control flow instructions.
 
-## ✨ Key Features
+##  Key Features
 * **Full MIPS Instruction Set Support:** * **R-Type:** `add`, `sub`, `and`, `or`, `slt`
   * **I-Type:** `addi`, `lw`, `sw`, `beq`
   * **J-Type:** `j` (Jump)
@@ -16,7 +16,7 @@ The design is deeply modular, instantiating separate hardware components such as
 
 ---
 
-## 🏗️ Hardware Architecture & Datapath
+##  Hardware Architecture & Datapath
 
 The following diagram illustrates the high-level datapath routing implemented in the VHDL top module (`mips_processor.vhd`). It shows how data flows between the Program Counter, Memories, Register File, and ALU based on the instruction type.
 
@@ -66,7 +66,7 @@ graph TD
 
 ---
 
-## 🧠 Control Unit Logic
+##  Control Unit Logic
 
 The `control_unit` decodes the 6-bit `op_code` and generates the necessary routing flags and ALU operation codes.
 
@@ -81,7 +81,7 @@ The `control_unit` decodes the 6-bit `op_code` and generates the necessary routi
 
 ---
 
-## ✅ Simulation & Assembly Verification
+##  Simulation & Assembly Verification
 The project is verified using a simulated assembly program hardcoded into the `instruction_memory.vhd` array. 
 
 ### Assembly Test Program (`mips_processor_tb.vhd`)
