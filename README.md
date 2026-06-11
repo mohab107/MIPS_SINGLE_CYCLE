@@ -104,4 +104,3 @@ The testbench executes the following logic to confirm arithmetic accuracy, memor
 SKIP: addi $s2, $zero, 777    # $s2 = 777 (Execution resumes here)
 ```
 
-**To verify the design in ModelSim/Vivado:** Run the testbench for at least `150 ns`. Inspect the `register_file` signals to ensure `$t0` through `$s2` hold the correct values, and verify that the Program Counter (PC) bypasses the skipped instructions correctly.
