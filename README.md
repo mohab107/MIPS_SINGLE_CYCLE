@@ -99,8 +99,8 @@ The testbench executes the following logic to confirm arithmetic accuracy, memor
       lw   $t7, 0($zero)      # $t7 = Memory[0] = 15
       beq  $t7, $t2, SKIP     # Branch taken since 15 == 15
       addi $s0, $zero, 999    # (Instruction Skipped)
-      j    DONE               # (Instruction Skipped due to prior branch)
+      j    DONE               # (Jumps to Done branch)
       addi $s1, $zero, 888    # (Instruction Skipped)
-SKIP: addi $s2, $zero, 777    # $s2 = 777 (Execution resumes here)
+DONE: addi $s2, $zero, 777    # $s2 = 777 (Execution resumes here)
 ```
 
